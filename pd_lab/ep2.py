@@ -21,4 +21,4 @@ axs[2].set_title("flights")
 
 figure = plt.gcf()
 figure.set_size_inches(18, 6)
-plt.savefig("flights")
+plt.savefig("flightss.png")

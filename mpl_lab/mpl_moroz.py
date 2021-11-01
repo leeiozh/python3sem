@@ -17,6 +17,8 @@ for i in range(number_of_datas):
                 pass
     axs[i].scatter(x[i], y[i], s=3)
 
-figure = plt.gcf()
-figure.set_size_inches(18, 6)
-plt.savefig("dead.png")
+# figure = plt.gcf()
+# figure.set_size_inches(18, 6)
+# plt.savefig("dead.png")
+
+plt.show()

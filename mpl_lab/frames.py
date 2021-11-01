@@ -1,13 +1,10 @@
 import matplotlib.pyplot as plt
 
-x = [[] for i in range(12)]
-i = 0
+x = []
 
 with open("data.dat", 'r') as file:
-    for line in file:
-        for num in line.split():
-            x[i].append(float(num))
-        i += 1
+    for i, line in enumerate(file):
+        x.append([float(num) for num in line.split()])
 
 for i in range(0, len(x), 2):
     fig, ax = plt.subplots()

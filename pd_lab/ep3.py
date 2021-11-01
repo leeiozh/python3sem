@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 ejudge = pd.read_html("results_ejudge.html")[0]
@@ -7,7 +8,7 @@ groups = pd.read_excel("students_info.xlsx")
 data = pd.merge(groups, ejudge, on='User')
 
 group_faculty = groups['group_faculty'].unique()
-group_out = groups['group_out'].unique()
+group_out = np.sort(groups['group_out'].unique())
 
 res_fac = [data[data['group_faculty'] == i]['Solved'].mean() for i in group_faculty]
 res_out = [data[data['group_out'] == i]['Solved'].mean() for i in group_out]

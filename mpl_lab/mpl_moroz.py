@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 
 number_of_datas = 5
 
@@ -8,7 +9,7 @@ x = [[] for i in range(number_of_datas)]
 y = [[] for i in range(number_of_datas)]
 
 for i in range(number_of_datas):
-    with open("data/00" + str(i + 1) + ".dat", 'r') as file:
+    with open(os.path.join("data", "00" + str(i + 1) + ".dat"), 'r') as file:
         for line in file:
             try:
                 y[i].append(float(line.split()[1]))

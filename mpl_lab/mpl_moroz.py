@@ -11,11 +11,15 @@ y = [[] for i in range(number_of_datas)]
 for i in range(number_of_datas):
     with open(os.path.join("data", "00" + str(i + 1) + ".dat"), 'r') as file:
         for line in file:
-            try:
+            count = float(line.split()[0])
+            break
+        for line in file:
+            if count <= 0:
+                break
+            else:
+                count -= 1
                 y[i].append(float(line.split()[1]))
                 x[i].append(float(line.split()[0]))
-            except:
-                pass
     axs[i].scatter(x[i], y[i], s=3)
 
 plt.axis('equal')

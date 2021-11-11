@@ -1,0 +1,11 @@
+\begin{table}[h!]
+\centering
+\caption{Мое название}
+\begin{tabular}{|l|c|c|c|}
+\hline
+x & 4 & 7\\ \hline
+y & 5 & 5\\ \hline
+n & 4 & 10\\ \hline
+t & 87 & 2\\ \hline
+\end{tabular}
+\end{table}

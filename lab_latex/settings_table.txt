@@ -2,5 +2,4 @@ caption >>> Мое название
 label >>>
 center >>> True
 alignment >>> |l|c|c|c|
-data >>> my_data.csv
 order >>> x,y,n,t,

@@ -21,8 +21,7 @@ for i in range(number_of_datas):
                 y[i].append(float(line.split()[1]))
                 x[i].append(float(line.split()[0]))
     axs[i].scatter(x[i], y[i], s=3)
-
-plt.axis('equal')
+    axs[i].set_aspect('equal')
 
 figure = plt.gcf()
 figure.set_size_inches(18, 6)

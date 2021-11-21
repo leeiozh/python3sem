@@ -1,6 +1,16 @@
-from sympy import symbols, Eq, solve
+import sympy
 
-l = symbols('l')
-m = symbols('m')
-r = symbols('r')
+l, m, r = sympy.symbols('l m r')
 
+matrix = sympy.Matrix([[0, 0, 0, -1 / r, 0, 0, 0, 0, 0],
+                       [0, 0, 0, 0, -1 / r, 0, 0, 0, 0],
+                       [0, 0, 0, 0, 0, -1 / r, 0, 0, 0],
+                       [-l - 2 * m, 0, 0, 0, 0, 0, 0, 0, 0],
+                       [0, -m, 0, 0, 0, 0, 0, 0, 0],
+                       [0, 0, -m, 0, 0, 0, 0, 0, 0],
+                       [-l, 0, 0, 0, 0, 0, 0, 0, 0],
+                       [0, 0, 0, 0, 0, 0, 0, 0, 0],
+                       [-l, 0, 0, 0, 0, 0, 0, 0, 0]])
+
+for val in matrix.eigenvals():
+    print(val)

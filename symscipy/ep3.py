@@ -13,8 +13,7 @@ eq = Eq(y(x).diff(x), -2 * y(x))
 res = dsolve(eq, y(x), ics={y(0): sqrt(2)})
 x_arr = np.linspace(0, 10, scale)
 
-# следующая строчка заняла больше времени на свое написание, чем вся остальная лаба
-res_sym = [float(str([res.evalf(subs={x: i})][-1]).split()[-1][:-1]) for i in x_arr]
+res_sym = [([res.evalf(subs={x: i})][-1]).rhs for i in x_arr]
 
 plt.plot(x_arr, res_sym, label='simpy')
 
